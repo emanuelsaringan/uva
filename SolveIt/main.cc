@@ -16,6 +16,7 @@ int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
 
+  const double kEpsilon = 0.0000001;
   double p, q, r, s, t, u;
   while (cin >> p >> q >> r >> s >> t >> u) {
     double low = 0.0;
@@ -23,7 +24,7 @@ int main() {
     double mid = (low + high) / 2.0;
     while (true) {
       double guess_val = eval(mid, p, q, r, s, t, u);
-      if (fabs(guess_val) <= 0.0000001) {
+      if (fabs(guess_val) <= kEpsilon) {
         printf("%.4f\n", mid);
         break;
       }
