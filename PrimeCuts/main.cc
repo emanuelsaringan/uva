@@ -1,5 +1,5 @@
-#include <iostream>
 #include <cmath>
+#include <iostream>
 #include <vector>
 
 using namespace std;
@@ -46,7 +46,6 @@ int main() {
 
   vector<int> primes;
   PopulatePrimes(&primes);
-
   int n, c;
   while (cin >> n >> c) {
     int sublistSize = FindEndIndex(primes, n) + 1;
@@ -56,10 +55,8 @@ int main() {
       start = 0;
       end = sublistSize - 1;
     } else {
-      // 0 1 2 3 4 5
       start = (sublistSize >> 1) - (sublistSize % 2 == 0 ? c : c - 1);
       end = start + centerListSize - 1;
-      // 0 1 2 3 4 5 6
     }
     cout << n << " " << c << ":";
     for (int i = start; i <= end; i++) {
