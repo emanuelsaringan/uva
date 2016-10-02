@@ -59,7 +59,7 @@ int main() {
     }
     string expected;
     cin >> expected;
-    cout << (expected == Format(num2)? "YES" : "NO") << '\n';
+    cout << (expected == Format(num2) ? "YES" : "NO") << '\n';
   }
   cout << "END OF OUTPUT" << endl;
   return 0;
