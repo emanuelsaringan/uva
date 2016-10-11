@@ -35,7 +35,7 @@ int main() {
       cin >> points[i].first >> points[i].second;
     }
     sort(points.begin(), points.end(),
-        [](const pair<double, double>& p1, const pair<double, double>& p2){
+        [](const pair<double, double>& p1, const pair<double, double>& p2) {
           return p1.first < p2.first;
         });
     double total = 0.0;
